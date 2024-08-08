@@ -5,5 +5,5 @@ DROP TABLE IF EXISTS usuario;
 
 CREATE TABLE usuario (
 	id INT not null unique PRIMARY KEY,
-    lang ENUM("EN", "ES", "AR") not null
+    lang SET("EN", "ES", "AR") not null
 );
