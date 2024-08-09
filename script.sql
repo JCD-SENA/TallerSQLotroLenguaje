@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS lenguas;
+USE lenguas;
+
+DROP TABLE IF EXISTS usuario;
+
+CREATE TABLE usuario (
+	id INT NOT NULL UNIQUE PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    sexo ENUM("M","F") NOT NULL DEFAULT "M",
+    lang SET("EN", "ES", "AR") NOT NULL
+);
